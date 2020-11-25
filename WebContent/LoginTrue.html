@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+    
+    	.bg {
+       background:url(images/10214x.jpg) no-repeat center fixed;
+       background-size:contain;
+         }
+    	
+        .btn-primary{
+            color: white;
+            background-color: black;
+            border-color: blanchedalmond;
+        }
+    
+    
+        /*web background*/
+        
+        .container {
+            display: table;
+            height: 100%;
+            position: relative;
+           
+           
+            
+        }
+        
+        .row {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        /* centered columns styles */
+        
+        .row-centered {
+            text-align: center;
+            
+        }
+        
+        .col-centered {
+            display: inline-block;
+        	   float: none;
+            text-align: left;
+            margin-right: -4px;
+        }
+       
+    </style>
+</head>
+
+<body class="bg">
+
+
+    <div class="container">
+    	
+    	
+        <div class="row row-centered">
+            <div class="well col-md-6 col-centered">
+                <h2>欢迎登录</h2>
+                <form action="" method="post" name="sub" role="form">
+                    <div class="input-group input-group-md">
+                        <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" id="userid" name="userid" placeholder="请输入用户ID" />
+                    </div>
+                    <div class="input-group input-group-md">
+                        <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码" />
+                    </div>
+                    <br/>
+                    
+                     <input  class="btn btn-primary btn-block" onclick="yon()" type="button" value="用户名登录">     
+                    <input  class="btn btn-primary btn-block" onclick="guan()" type="button" value="管理员登录">  
+                 </form>
+            </div>
+        </div>
+        </div>
+    
+   <script>
+   		function yon(){
+   			document.sub.action="/MyFirstEcl/LoginOne";
+   			document.sub.submit();
+   		}
+   		function guan(){
+   			document.sub.action="/MyFirstEcl/LoginTwo";
+   			document.sub.submit();
+   		}
+   		
+   
+   </script>
+     
+    
+    
+    
+</body>
+
+</html>
